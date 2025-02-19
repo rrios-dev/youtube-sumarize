@@ -1,0 +1,47 @@
+{
+  "name": "youtube-sumarize",
+  "module": "dist/main.js",
+  "version": "0.0.4",
+  "type": "module",
+  "description": "Sumarize YouTube videos",
+  "author": "Roberto Ríos <roberto@rrios.dev>",
+  "license": "MIT",
+  "keywords": [
+    "youtube",
+    "summarize",
+    "video",
+    "summary"
+  ],
+  "homepage": "https://github.com/rrios-dev/youtube-sumarize",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rrios-dev/youtube-sumarize"
+  },
+  "bin": {
+    "youtube-sumarize": "dist/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "add-executable": "echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && npm run add-executable"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/bun": "latest",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "typescript-eslint": "^8.24.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "inquirer": "^12.4.2",
+    "youtube-transcript": "^1.2.1"
+  }
+}
