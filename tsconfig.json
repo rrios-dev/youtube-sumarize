@@ -9,21 +9,24 @@
     "outDir": "./dist",
     "allowJs": true,
 
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
-    "verbatimModuleSyntax": true,
-    "noEmit": false,
-
-    // Best practices
-    "strict": true,
+    // Bundler mode for esbuild
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
+    "strict": true,
 
-    // Some stricter flags (disabled by default)
+    // Output options for esbuild
+    "noEmit": true,
+    "sourceMap": true,
+
+    // Stricter checks
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

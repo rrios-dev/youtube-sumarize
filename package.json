@@ -1,9 +1,9 @@
 {
-  "name": "youtube-sumarize",
-  "module": "dist/main.js",
-  "version": "0.0.4",
-  "type": "module",
-  "description": "Sumarize YouTube videos",
+  "name": "youtube-summarize",
+  "module": "dist/bundle.cjs",
+  "version": "0.0.7",
+  "type": "commonjs",
+  "description": "Summarize YouTube videos",
   "author": "Roberto Ríos <roberto@rrios.dev>",
   "license": "MIT",
   "keywords": [
@@ -12,26 +12,27 @@
     "video",
     "summary"
   ],
-  "homepage": "https://github.com/rrios-dev/youtube-sumarize",
+  "homepage": "https://github.com/rrios-dev/youtube-summarize",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rrios-dev/youtube-sumarize"
+    "url": "https://github.com/rrios-dev/youtube-summarize"
   },
   "bin": {
-    "youtube-sumarize": "dist/main.js"
+    "youtube-summarize": "dist/bundle.cjs"
   },
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "add-executable": "echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js",
+    "add-executable": "echo '#!/usr/bin/env node' | cat - dist/bundle.cjs > temp && mv temp dist/bundle.cjs",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && npm run add-executable"
+    "build": "npm run clean && node build.js && npm run add-executable"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
     "@types/bun": "latest",
+    "esbuild": "^0.25.0",
     "eslint": "^9.20.1",
     "globals": "^15.15.0",
     "typescript-eslint": "^8.24.1"
