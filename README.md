@@ -1,4 +1,9 @@
 # YouTube Transcript Summarizer
+[![npm version](https://badge.fury.io/js/youtube-summarize.svg)](https://www.npmjs.com/package/youtube-summarize)
+
+Welcome to the **YouTube Transcript Summarizer**! 🎉
+
+Discover the power of summarizing YouTube videos effortlessly with our CLI tool. Published on [npmjs.com](https://www.npmjs.com/package/youtube-summarize), this package allows you to extract and summarize transcripts from YouTube videos using Google's Generative AI (Gemini). Perfect for professionals seeking concise, actionable insights from lengthy videos without the hassle of manual review.
 
 ## Overview
 The **YouTube Transcript Summarizer** is a CLI tool that extracts transcripts from YouTube videos and generates executive summaries in Spanish using Google's Generative AI (Gemini). This tool is designed for professionals who need concise, actionable insights from long videos without manually going through the entire content.
